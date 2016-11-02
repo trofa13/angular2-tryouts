@@ -1,0 +1,6 @@
+Protractor results for: 11/2/2016, 10:02:59 AM
+
+AppDir:./
+  Suite: QuickStart E2E Tests -- passed
+    passed - should display: Angular Modules
+

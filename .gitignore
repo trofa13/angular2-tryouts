@@ -3,3 +3,5 @@
 *.map
 app/**/*.js
 .idea
+*.com.google*
+/karma-*
