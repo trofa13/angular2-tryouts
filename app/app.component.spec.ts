@@ -1,13 +1,12 @@
 /* tslint:disable:no-unused-variable */
 import { AppComponent } from './app.component';
-import { BrowserModule }  from '@angular/platform-browser';
+
 /* Feature Modules */
-import { ContactModule }    from './contact/contact.module';
 import { CoreModule }       from './core/core.module';
 /* Routing Module */
 import { AppRoutingModule } from './app-routing.module';
-import { APP_BASE_HREF } from '@angular/common';
 
+import { APP_BASE_HREF } from '@angular/common';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
@@ -44,6 +43,15 @@ describe('AppComponent', function () {
     fixture.detectChanges();
     const h1 = de.nativeElement;
     expect(h1.innerText).toMatch(/Angular Modules/i,
-      '<h1> should say something about "Angular App"');
+      '<h1> should say something about "Angular Modules"');
   });
+
+  it('should change subtitle', () =>{
+    comp.subtitle = 'test-title';
+    fixture.detectChanges();
+    expect(de.nativeElement.innerText).toContain('test-title',
+        '<h1> should change its subtitle if needed')
+  });
+
+
 });
